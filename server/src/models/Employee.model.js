@@ -32,6 +32,10 @@ const Employee = sequelize.define(
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
+    departmentId: {
+  type: DataTypes.INTEGER,
+  allowNull: false,
+},
   },
   {
     timestamps: true,
