@@ -34,14 +34,16 @@ export default function DashboardPage() {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <StatsCard
+      <StatsCard
           title="Employees"
           value={employeeCount}
+          link="/employees"
         />
 
         <StatsCard
           title="Departments"
           value={departmentCount}
+         link="/departments" 
         />
       </div>
     </div>

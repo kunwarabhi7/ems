@@ -4,10 +4,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
 
-export default function StatsCard({ title, value }) {
+export default function StatsCard({ title, value,link}) {
+const router = useRouter();
+
   return (
-    <Card>
+    <Card onClick={()=>router.push(link)}>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
       </CardHeader>
