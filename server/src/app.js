@@ -35,7 +35,7 @@ app.use("/api/v1/auth",authRoutes);
 app.use("/api/v1/employees", employeeRoutes);
 app.use("/api/v1/departments", departmentRoutes);
 
-app.use("*", (req, res) => {
+app.use((req, res) => {
   res.status(404).json({
     success: false,
     message: "Route not found",
