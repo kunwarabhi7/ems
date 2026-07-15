@@ -143,17 +143,6 @@ DELETE /api/v1/departments/:id
 
 ---
 
-## Screenshots
-
-- Login
-- Dashboard
-- Employees
-- Departments
-
-(Add screenshots later)
-
----
-
 ## Future Improvements
 
 - Role Based Authentication
@@ -170,7 +159,7 @@ DELETE /api/v1/departments/:id
 
 ## Author
 
-Abhishek Parmar
+Abhishek
 
 GitHub
 
