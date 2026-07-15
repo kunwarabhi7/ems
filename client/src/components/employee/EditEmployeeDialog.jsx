@@ -43,16 +43,16 @@ export default function EditEmployeeDialog({
       onOpenChange={setOpen}
     >
 
-      <DialogTrigger asChild>
-
-        <Button
-          size="icon"
-          variant="secondary"
-        >
-          <Pencil size={18} />
-        </Button>
-
-      </DialogTrigger>
+      <DialogTrigger
+  render={
+    <Button
+      size="icon"
+      variant="secondary"
+    />
+  }
+>
+  <Pencil size={18} />
+</DialogTrigger>
 
       <DialogContent>
 

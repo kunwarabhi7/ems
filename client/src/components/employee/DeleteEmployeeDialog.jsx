@@ -27,11 +27,16 @@ export default function DeleteEmployeeDialog({
 
   return (
     <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <Button size="icon" variant="destructive">
-          <Trash2 size={18} />
-        </Button>
-      </AlertDialogTrigger>
+      <AlertDialogTrigger
+  render={
+    <Button
+      size="icon"
+      variant="destructive"
+    />
+  }
+>
+  <Trash2 size={18} />
+</AlertDialogTrigger>
 
       <AlertDialogContent>
         <AlertDialogHeader>
