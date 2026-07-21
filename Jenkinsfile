@@ -1,41 +1,47 @@
-pipeline{
+pipeline {
     agent any
-}
 
-stages{
-    stage("Checkout"){
-        steps{
-            checkout scm
-        }
-    }
+    stages {
 
-    stage("Install Client Dependencies"){
-        steps{
-            dir("client"){
-                sh "npm install"
+        stage("Checkout") {
+            steps {
+                checkout scm
             }
         }
-        stage("Build Client"){
-            steps{
-                dir("client"){
+
+        stage("Install Client Dependencies") {
+            steps {
+                dir("client") {
+                    sh "npm install"
+                }
+            }
+        }
+
+        stage("Build Client") {
+            steps {
+                dir("client") {
                     sh "npm run build"
                 }
             }
         }
-        stage("Install Server dependencies"){
-            steps{
-                dir("server"){
-                    sh 'npm install'
+
+        stage("Install Server Dependencies") {
+            steps {
+                dir("server") {
+                    sh "npm install"
                 }
             }
         }
+
     }
+
     post {
-        success{
-            echo "build successfull"
+        success {
+            echo "Build Successful"
         }
-        failure{
-            echo "Build failed"
+
+        failure {
+            echo "Build Failed"
         }
     }
 }
