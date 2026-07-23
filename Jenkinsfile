@@ -51,10 +51,7 @@ pipeline {
         }
 
     }
-
-stage("Docker Build"){
-}
-
+    
     post {
         success {
             echo "Build Successful"
