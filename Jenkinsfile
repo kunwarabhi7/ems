@@ -13,14 +13,6 @@ pipeline {
             }
         }
 
-        stage("Check Node"){
-            steps{
-                sh "node -v"
-                sh "npm -v"
-
-            }
-        }
-
         stage("Install Client Dependencies") {
             steps {
                 dir("client") {
@@ -45,7 +37,23 @@ pipeline {
             }
         }
 
+        stage('Docker Build'){
+            steps{
+                sh "Docker compose build"
+            }
+        }
+
+        stage("Deploy Application"){
+            steps{
+                sh 'Docker compose down'
+                sh 'Docker compose up -d'
+            }
+        }
+
     }
+
+stage("Docker Build"){
+}
 
     post {
         success {
