@@ -1,7 +1,7 @@
 pipeline {
     agent any
     
-    enviroment {
+    environment {
         NEXT_PUBLIC_API_URL="/api/v1"
     }
 
