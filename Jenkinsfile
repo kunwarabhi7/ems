@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    enviroment {
+        NEXT_PUBLIC_API_URL="/api/v1"
+    }
+
     stages {
 
         stage("Checkout") {
