@@ -11,8 +11,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: ems
 
-    ports:
-      - "3306:3306"
+    # ports:
+    #   - "3306:3306"
 
     volumes:
       - mysql-data:/var/lib/mysql
@@ -39,7 +39,7 @@ services:
       PORT: 5000
 
     ports:
-      - "5000:5000"
+      - "127.0.0.1:5000:5000"
 
   frontend:
     build:
@@ -55,7 +55,7 @@ services:
       - backend
 
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
 
 
 volumes:
